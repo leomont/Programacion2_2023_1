@@ -1,5 +1,7 @@
 package Gradebook;
 
+import java.util.Scanner;
+
 public class GradeBook {
 	
 	
@@ -56,7 +58,26 @@ public class GradeBook {
 	}
 	
 	public void determineClassAverage() {
+		Scanner input = new  Scanner(System.in);
 		
+		int total;
+		int gradeCounter;
+		int grade;
+		int average;
+		
+		total = 0 ;
+		gradeCounter = 1;
+		
+		while (gradeCounter <= 8) {
+			System.out.println("Ingrese la nota");
+			grade = input.nextInt();
+			total = total + grade;
+			gradeCounter = gradeCounter +1;
+		}
+		
+		average = total /8;
+		System.out.println("Total de las notas Sumatoria: " + total);
+		System.out.println("Promedio: " + average );		
 	}
 
 }

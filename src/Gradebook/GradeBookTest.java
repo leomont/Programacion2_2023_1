@@ -29,6 +29,10 @@ public class GradeBookTest {
 		planillaNotasCurso3.displayMessage();
 		
 		System.out.println("Numero de estudiantes del curso: "+ planillaNotasCurso3.getNombreCurso() + " Aforo: " +planillaNotasCurso3.getAforo());
+		
+		planillaNotasCurso3.determineClassAverage();
+	
+	
 	}
 
 }
