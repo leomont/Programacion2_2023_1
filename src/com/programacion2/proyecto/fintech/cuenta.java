@@ -1,6 +1,6 @@
 package com.programacion2.proyecto.fintech;
 
-public class Account {
+public class cuenta {
 
 	private String numeroCuenta = "";
 	private float saldo = 0;
@@ -38,7 +38,7 @@ public class Account {
 	}
 
 
-	public Account() {
+	public cuenta() {
 		
 		// TODO Auto-generated constructor stub
 	}

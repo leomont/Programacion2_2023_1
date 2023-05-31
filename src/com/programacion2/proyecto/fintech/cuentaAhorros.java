@@ -1,8 +1,8 @@
 package com.programacion2.proyecto.fintech;
 
-public class currentAccount extends Account{
+public class cuentaAhorros {
 
-	public currentAccount() {
+	public cuentaAhorros() {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -28,17 +28,29 @@ public class TwoButtons {
 
 		label = new JLabel("MENSAJE OCULTO!!!!");
 		MyDrawPanel drawPanel = new MyDrawPanel();
+		
+		JButton btnNewButton = new JButton("Salir");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-							.addComponent(label)
-							.addComponent(labelButton))
-						.addComponent(colorButton))
-					.addGap(61)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addContainerGap()
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+									.addComponent(label)
+									.addComponent(labelButton))
+								.addComponent(btnNewButton))
+							.addGap(64))
+						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+							.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+							.addComponent(colorButton)
+							.addGap(31)))
 					.addComponent(drawPanel, GroupLayout.PREFERRED_SIZE, 164, GroupLayout.PREFERRED_SIZE)
 					.addGap(76))
 		);
@@ -51,8 +63,10 @@ public class TwoButtons {
 							.addComponent(label, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
 							.addGap(29)
 							.addComponent(labelButton, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(colorButton, GroupLayout.PREFERRED_SIZE, 59, GroupLayout.PREFERRED_SIZE)))
+							.addGap(12)
+							.addComponent(colorButton, GroupLayout.PREFERRED_SIZE, 59, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btnNewButton)))
 					.addGap(35))
 		);
 		frame.getContentPane().setLayout(groupLayout);
@@ -63,7 +77,7 @@ public class TwoButtons {
 
 	class LabelButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent event) {
-			label.setText("HOLA A TODOS!!!!");
+			label.setText("Hola Programacion 2");
 		}
 	} // close inner class
 
@@ -72,7 +86,6 @@ public class TwoButtons {
 			frame.repaint();
 		}
 	} // close inner class
-
 }
 
 class MyDrawPanel extends JPanel {
@@ -82,12 +95,12 @@ class MyDrawPanel extends JPanel {
 		g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
 		// make random colors to fill with
-		int x = (int) (Math.random() * 255);
+		int x = (int) (Math.random() * 255); 
 		int y = (int) (Math.random() * 255);
 		int z = (int) (Math.random() * 255);
 
-		Color randomColor = new Color(x, y, z);
-		g.setColor(randomColor);
+		Color randomColor = new Color(Color.BLUE.getBlue(), Color.BLUE.getBlue(), Color.BLUE.getBlue());
+		g.setColor(Color.BLUE);
 		g.fillOval(70, 70, 100, 100);
 	}
 

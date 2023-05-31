@@ -1,8 +1,8 @@
 package com.programacion2.proyecto.fintech;
 
-public class Persona {
+public class usuario {
 
-	public Persona() {
+	public usuario() {
 		// TODO Auto-generated constructor stub
 	}
 

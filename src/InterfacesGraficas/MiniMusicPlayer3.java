@@ -4,6 +4,7 @@ import javax.sound.midi.*;
 import java.io.*;
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.GroupLayout.Alignment;
 
   // this one plays random music with it, but only because there is a listener.
 
@@ -22,6 +23,16 @@ public class MiniMusicPlayer3 {
        ml = new MyDrawPanel();
        f.setContentPane(ml);
        f.setBounds(30,30, 300,300);
+       GroupLayout groupLayout = new GroupLayout(f.getContentPane());
+       groupLayout.setHorizontalGroup(
+       	groupLayout.createParallelGroup(Alignment.LEADING)
+       		.addGap(0, 300, Short.MAX_VALUE)
+       );
+       groupLayout.setVerticalGroup(
+       	groupLayout.createParallelGroup(Alignment.LEADING)
+       		.addGap(0, 272, Short.MAX_VALUE)
+       );
+       f.getContentPane().setLayout(groupLayout);
        f.setVisible(true);
     }
  
@@ -37,7 +48,7 @@ public class MiniMusicPlayer3 {
          sequencer.open();
         
          sequencer.addControllerEventListener(ml, new int[] {127});
-         Sequence seq = new Sequence(Sequence.PPQ, 4);
+         Sequence seq = new Sequence(Sequence.PPQ, 20);
          Track track = seq.createTrack();     
 
          // now make two midi events (containing a midi message)

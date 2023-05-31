@@ -26,7 +26,7 @@ public class SimpleAnimation {
 		for (int i = 0; i < 130; i++) {
 
 			x++;
-			y = y + 2;
+			y = y + 1;
 
 			drawPanel.repaint();
 
