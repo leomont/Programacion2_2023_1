@@ -19,6 +19,29 @@ public class persona {
 	}
 
 	/**
+	 * @param nombre
+	 * @param apellidos
+	 * @param fechaNacimiento
+	 * @param correoElectronico
+	 * @param cedula
+	 * @param direccionResidencia
+	 * @param direccionCorrespondencia
+	 * @param recibirNotificaciones
+	 */
+	public persona(String nombre, String apellidos, String fechaNacimiento, String correoElectronico, String cedula,
+			String direccionResidencia, String direccionCorrespondencia, Boolean recibirNotificaciones) {
+		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.fechaNacimiento = fechaNacimiento;
+		this.correoElectronico = correoElectronico;
+		this.cedula = cedula;
+		this.direccionResidencia = direccionResidencia;
+		this.direccionCorrespondencia = direccionCorrespondencia;
+		this.recibirNotificaciones = recibirNotificaciones;
+	}
+
+	/**
 	 * @param nombre the nombre to set
 	 */
 	public void setNombre(String nombre) {

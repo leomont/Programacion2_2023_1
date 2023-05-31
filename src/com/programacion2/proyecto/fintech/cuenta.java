@@ -7,6 +7,17 @@ public class cuenta {
 	
 	
 	/**
+	 * @param numeroCuenta
+	 * @param saldo
+	 */
+	public cuenta(String numeroCuenta, float saldo) {
+		super();
+		this.numeroCuenta = numeroCuenta;
+		this.saldo = saldo;
+	}
+
+
+	/**
 	 * @return the numeroCuenta
 	 */
 	public String getNumeroCuenta() {
