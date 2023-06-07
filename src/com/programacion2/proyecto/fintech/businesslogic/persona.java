@@ -1,12 +1,12 @@
-package com.programacion2.proyecto.fintech;
+package com.programacion2.proyecto.fintech.businesslogic;
 
 public class persona {
 	
+	private String cedula;
 	private String nombre;
 	private String apellidos;
 	private String fechaNacimiento;
 	private String correoElectronico;
-	private String cedula;
 	private String direccionResidencia;
 	private String direccionCorrespondencia;
 	private Boolean recibirNotificaciones;
@@ -17,6 +17,29 @@ public class persona {
 	public String getNombre() {
 		return nombre;
 	}
+
+	
+	
+	/**
+	 * @param cedula
+	 * @param nombre
+	 * @param apellidos
+	 * @param correoElectronico
+	 * @param direccionResidencia
+	 * @param direccionCorrespondencia
+	 */
+	public persona(String cedula, String nombre, String apellidos, String correoElectronico, String direccionResidencia,
+			String direccionCorrespondencia) {
+		super();
+		this.cedula = cedula;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.correoElectronico = correoElectronico;
+		this.direccionResidencia = direccionResidencia;
+		this.direccionCorrespondencia = direccionCorrespondencia;
+	}
+
+
 
 	/**
 	 * @param nombre
@@ -30,7 +53,6 @@ public class persona {
 	 */
 	public persona(String nombre, String apellidos, String fechaNacimiento, String correoElectronico, String cedula,
 			String direccionResidencia, String direccionCorrespondencia, Boolean recibirNotificaciones) {
-		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.fechaNacimiento = fechaNacimiento;
