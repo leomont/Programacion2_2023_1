@@ -1,6 +1,7 @@
 package com.programacion2.proyecto.fintech.businesslogic;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class usuario extends persona {
 
@@ -51,12 +52,39 @@ public class usuario extends persona {
 		
 	}
 	
+	public String crearNuevoClienteSinNotificaciones(String cedula, String nombre, String apellidos,  String correoElectronico, 
+			String direccionResidencia, String direccionCorrespondencia) {
+		
+		new usuario(cedula, nombre, apellidos, correoElectronico, direccionResidencia, direccionCorrespondencia);
+		
+		return "Ingreso OK " + nombre;
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "usuario [getNombre()=" + getNombre() + ", getApellidos()=" + getApellidos() + ", getFechaNacimiento()="
+				+ getFechaNacimiento() + ", getCorreoElectronico()=" + getCorreoElectronico() + ", getCedula()="
+				+ getCedula() + ", getDireccionResidencia()=" + getDireccionResidencia()
+				+ ", getDireccionCorrespondencia()=" + getDireccionCorrespondencia() + ", getRecibirNotificaciones()="
+				+ getRecibirNotificaciones() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+
+
+
 	public String eliminarCliente(String cedula) {
 		
 		//TODO: Implementar un metodo que busque el cliente con la cedula y elimine el registro 
 		//p.ej:
 		//ArrayList<String> demo = new ArrayList<String>();
 		//demo.remove(0)
+		
+		ArrayList<usuario> listadoClientes = new ArrayList<usuario>();
+		
+		usuario usuariobuscado = listadoClientes.get(0);
+		
+		listadoClientes.remove(0);
 		
 		boolean fueEliminado = false;
 		
@@ -76,6 +104,8 @@ public class usuario extends persona {
 		//p.ej:
 		ArrayList<usuario> demo = new ArrayList<usuario>();
 		usuario user1 = demo.get(0);
+		
+	
 		
 		return new usuario();
 	}
@@ -114,6 +144,16 @@ public class usuario extends persona {
 		resultadoOperacion = "Saldo consignado Satisfactoriamente";
 		
 		return resultadoOperacion;
+	}
+	
+	public void listarUsuarios() {
+		ArrayList<usuario> demo = new ArrayList<usuario>();
+		usuario user1 = demo.get(0);
+		
+		for (usuario usuario : demo) {
+			usuario.toString();
+		}
+	
 	}
 
 }

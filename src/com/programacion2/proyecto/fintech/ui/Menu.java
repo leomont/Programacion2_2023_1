@@ -74,10 +74,14 @@ public class Menu extends JFrame {
 					.addContainerGap(37, Short.MAX_VALUE))
 		);
 		
-		JButton btnNewButton = new JButton("Agregar Cliente");
-		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnNewCliente = new JButton("Agregar Cliente");
+		
+		btnNewCliente.setForeground(Color.BLACK);
+		
+		btnNewCliente.setFont(new Font("Tahoma", Font.BOLD, 16));
+		
+		btnNewCliente.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
 				
 				Cliente detallesCliente = new Cliente();
@@ -87,10 +91,10 @@ public class Menu extends JFrame {
 				
 			}
 		});
-		btnNewButton.setBounds(32, 37, 287, 47);
-		desktopPane.add(btnNewButton);
+		btnNewCliente.setBounds(32, 37, 287, 47);
+		desktopPane.add(btnNewCliente);
 		
-		JButton btnNewButton_1 = new JButton("Remove Existing Student");
+		JButton btnNewButton_1 = new JButton("Borrar Cliente");
 		btnNewButton_1.setForeground(Color.BLACK);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -105,7 +109,7 @@ public class Menu extends JFrame {
 		btnNewButton_1.setBounds(32, 113, 287, 52);
 		desktopPane.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("View Students");
+		JButton btnNewButton_2 = new JButton("Listar Clientes");
 		btnNewButton_2.setForeground(Color.BLACK);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -120,7 +124,7 @@ public class Menu extends JFrame {
 		btnNewButton_2.setBounds(32, 195, 287, 52);
 		desktopPane.add(btnNewButton_2);
 		
-		JButton btnNewButton_3 = new JButton("Update Existing Student");
+		JButton btnNewButton_3 = new JButton("Actualizar Cliente Existente");
 		btnNewButton_3.setForeground(Color.BLACK);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -135,7 +139,7 @@ public class Menu extends JFrame {
 		btnNewButton_3.setBounds(32, 272, 287, 52);
 		desktopPane.add(btnNewButton_3);
 		
-		JButton btnNewButton_4 = new JButton("Logout");
+		JButton btnNewButton_4 = new JButton("Salir");
 		btnNewButton_4.setForeground(Color.BLACK);
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -150,9 +154,9 @@ public class Menu extends JFrame {
 		btnNewButton_4.setBounds(32, 348, 287, 47);
 		desktopPane.add(btnNewButton_4);
 		
-		JLabel lblNewLabel = new JLabel("Bienvenido Fintech App");
+		JLabel lblNewLabel = new JLabel("Fintech App");
 		lblNewLabel.setForeground(Color.BLACK);
-		lblNewLabel.setBounds(68, 22, 281, 27);
+		lblNewLabel.setBounds(138, 22, 141, 27);
 		desktopPane_1.add(lblNewLabel);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
 		contentPane.setLayout(gl_contentPane);

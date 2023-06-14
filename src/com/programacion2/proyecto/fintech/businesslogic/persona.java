@@ -11,15 +11,11 @@ public class persona {
 	private String direccionCorrespondencia;
 	private Boolean recibirNotificaciones;
 
-	/**
-	 * @return the nombre
-	 */
-	public String getNombre() {
-		return nombre;
+	public persona() {
+		// TODO Auto-generated constructor stub
 	}
 
-	
-	
+
 	/**
 	 * @param cedula
 	 * @param nombre
@@ -30,13 +26,34 @@ public class persona {
 	 */
 	public persona(String cedula, String nombre, String apellidos, String correoElectronico, String direccionResidencia,
 			String direccionCorrespondencia) {
-		super();
+		
 		this.cedula = cedula;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.correoElectronico = correoElectronico;
 		this.direccionResidencia = direccionResidencia;
 		this.direccionCorrespondencia = direccionCorrespondencia;
+	}
+
+
+
+	/**
+	 * @param cedula
+	 * @param nombre
+	 * @param apellidos
+	 * @param fechaNacimiento
+	 * @param correoElectronico
+	 * @param recibirNotificaciones
+	 */
+	public persona(String cedula, String nombre, String apellidos, String fechaNacimiento, String correoElectronico,
+			Boolean recibirNotificaciones) {
+		super();
+		this.cedula = cedula;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.fechaNacimiento = fechaNacimiento;
+		this.correoElectronico = correoElectronico;
+		this.recibirNotificaciones = recibirNotificaciones;
 	}
 
 
@@ -63,6 +80,15 @@ public class persona {
 		this.recibirNotificaciones = recibirNotificaciones;
 	}
 
+
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+	
+	
 	/**
 	 * @param nombre the nombre to set
 	 */
@@ -168,8 +194,5 @@ public class persona {
 		this.recibirNotificaciones = recibirNotificaciones;
 	}
 
-	public persona() {
-		// TODO Auto-generated constructor stub
-	}
 
 }

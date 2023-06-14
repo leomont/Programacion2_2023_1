@@ -134,7 +134,7 @@ public class cuenta {
 		
 	}
 	 
-	public void verMovimientos() {
+	public void verSaldo() {
 		
 	}
 	
